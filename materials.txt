@@ -1,0 +1,106 @@
+HotSense: ACM International Workshop on Thermal Sensing and Computing (Workshop Proposal for ACM MobiCom’25)
+
+Call for workshops: https://www.sigmobile.org/mobicom/2025/workshop_cfp.html
+Organizers
+Chenshu Wu (https://www.cswu.me/), The University of Hong Kong, HK SAR, China
+Chenshu Wu is an Assistant Professor in the Department of Computer Science at the University of Hong Kong, where he leads the HKU AIoT Lab. He received his B.E. and Ph.D. degrees both from Tsinghua University. He served as the Chief Scientist of and now consults Origin AI. His research focuses on wireless and mobile AIoT systems at the intersection of wireless sensing, ubiquitous computing, and the Internet of Things. He has published 3 books and holds 90+ filed/granted US and international patents. His research on WiFi sensing has been deployed as award-winning products worldwide. He is the recipient of NSFC Excellent Young Scientists Fund (HK & Macau), NAM Healthy Longevity Catalyst Award, and CCF Outstanding Doctoral Dissertation Award. He is currently an associate editor of ACM IMWUT and ACM TIoT. He was the Journal Track Co-Chair of EWSN 2025 and the TPC Co-Chair of IEEE ICPADS 2024, and served on the TPC of MobiSys, SenSys, MobiHoc, ICDCS, INFOCOM, etc. He also served on the organizing committee of CoNEXT 2025, RFCom 2024, CPS-IoT Week 2024, SenSys 2023, APSys 2021, and he co-organized the Wireless AI Perception workshop at CVPR’22 and CPD workshop at UbiComp’21. Dr. Wu co-authored the recent TADAR and TAPOR systems on thermal sensing, demonstrating the potential of low-resolution thermal arrays for privacy-preserving human sensing.
+Niki Trigoni (https://www.cs.ox.ac.uk/people/niki.trigoni/) University of Oxford, UK
+Prof. Niki Trigoni is a Professor of Computer Science at the University of Oxford, where she heads the Systems theme and is a Fellow of Kellogg College. She is also a Fellow of the Royal Academy of Engineering. Her research focuses on the integration of sensing and machine intelligence for context inference, control, and human-machine interaction. Prof. Trigoni obtained her DPhil from the University of Cambridge in 2001, followed by postdoctoral research at Cornell University (2002–2004), and served as a Lecturer at Birkbeck College, University of London (2004–2007). She joined the University of Oxford in 2007, where she established the Sensor Networks Group, conducting research in communication, localization, and in-network processing algorithms for sensor networks. From 2014 to 2019, she served as the Director of the EPSRC Centre for Doctoral Training on Autonomous Intelligent Machines and Systems, a program combining machine learning, robotics, sensor systems, and verification/control. She is also the CTO of Navenio, a spin-off commercializing scalable indoor positioning, and has been recognized as the CTO of the Year at the UK's Women in IT Awards in 2020. Recently, Prof. Trigoni's research has expanded to include thermal sensing technologies, especially for robotics and SLAM.
+Vishwanath Saragadam (https://vishwa91.github.io) University of California, Riverside, USA
+Vishwanath Saragadam is an Assistant Professor in the Department of Electrical and Computer Engineering (ECE) at the University of California Riverside where he leads the computational optics and display engineering (CODE) lab. Vishwanath received his Ph.D. from Carnegie Mellon University in ECE, and was a postdoctoral researcher at Rice University. He is a recipient of an outstanding postdoctoral researcher award in 2023, best paper award at ICCP in 2022, and outstanding thesis award in 2021. His research focus includes meta-optics, hyperspectral imaging, thermal imaging, and self-supervised algorithms for linear inverse problems. He has been part of technical program committee (as reviewer and meta-reviewer) for SIGGRAPH, SIGGRAPH Asia, CVPR, ICCV, ECCV, ICCP, and journal reviewer including TPAMI, TIP, TCI, Nature, and many more..
+Motivation and Rationale
+Thermal sensing is emerging as a powerful and timely area of research, especially with the advent of low-cost, low-resolution thermal infrared array sensors. These sensors can detect heat signatures of people and objects without capturing identifiable visual details, offering a compelling privacy-preserving alternative to traditional cameras and even some wireless RF-based sensors. As recent work points out, conventional visible-spectrum cameras provide rich detail but at the cost of privacy, while radio-frequency (RF) sensing (e.g., Wi-Fi or radar) preserves privacy but with lower resolution. Thermal arrays promise an excellent middle ground, achieving a balance between sensing fidelity and privacy. For example, the TADAR system demonstrated that a single commodity thermal array can perform multi-person detection and ranging by extending 2D heat pixel data into 3D information. This illustrates that thermal sensors can capture useful spatial and activity information while inherently limiting sensitive visual data, extending beyond RADAR, LIDAR, SONAR, or WiFi RADAR sensing. 
+Why now? Thermal imaging technology has recently become far more accessible. Miniature infrared array sensors (such as FLIR Lepton modules, Melexis microbolometer arrays, Meridian thermal sensors) are now affordable and easy to integrate into mobile and IoT devices. Researchers across multiple domains – mobile computing, human-computer interaction, computer vision, robotics, and localization – are beginning to explore thermal sensing as a new modality for ubiquitous computing.
+Notably, heat-based sensing opens up opportunities to "see" in situations where traditional sensors fail (for example, in low-light or smoke-filled environments). At the same time, such thermal sensing can maintain privacy in sensitive settings like homes or workplaces. The community’s interest in this area is growing, as evidenced by a surge of recent research. One notable example is the Heat-Assisted Detection and Ranging (HADAR) technique, which was featured as a Nature cover story in 2023.
+Given these developments, we believe it is timely to organize HotSense to consolidate efforts, foster collaboration, and shape the research agenda for thermal sensing in mobile and pervasive computing.
+Workshop Goals and Topics
+The primary goal of HotSense is to build and nurture a community around thermal sensing within the mobile and pervasive computing research field. We aim to bring together researchers from different disciplines — ranging from ubiquitous computing and wireless networks to computer vision, HCI, and robotics — to share their latest findings and brainstorm new ideas leveraging thermal sensors. By encouraging this interdisciplinary exchange, the workshop seeks to accelerate innovation in thermal sensing techniques and applications.
+Topics of interest include, but are not limited to:
+Human activity recognition and gesture detection using thermal cameras or arrays
+Pose estimation and people tracking via low-resolution thermal imaging
+Thermal-based depth sensing, detection and ranging
+Indoor localization and movement tracking with infrared thermal sensors
+Robotic perception and navigation augmented by thermal vision
+Privacy-preserving sensing systems that use thermal data instead of RGB video or RF signals
+Material sensing and object classification
+Scene temperature monitoring and its applications
+Data fusion and multimodal sensing
+Novel hardware designs and systems software for thermal sensing in mobile devices
+Low-power and energy-efficient thermal sensing platforms and algorithms
+Applications of thermal sensing in mobile health, smart homes, AR/VR, emergency response and smart cities
+These topics underscore the relevance of thermal sensing to a wide array of mobile and ubiquitous computing scenarios. By covering everything from fundamental sensing techniques to end-to-end systems and applications, HotSense will attract a broad audience from academia and industry interested in exploring the potential of thermal sensing.
+Planned Format
+HotSense is planned as a half-day workshop on November 8, 2025 (co-located with ACM MobiCom 2025 in Hong Kong). The schedule will be designed to maximize interaction and discussion among participants. The tentative format and activities include:
+Invited Keynote Talk: A distinguished researcher will kick off the workshop. We plan to invite Prof. Fanglin Bao (Westlake University) as the keynote speaker, who will present his recent “Heat-Assisted Detection and Ranging (HADAR)” work published in Nature. This keynote will set the stage by showcasing state-of-the-art thermal sensing research and inspiring new ideas.
+Technical Paper Presentations: We plan to accept and present 5–10 peer-reviewed research papers. These will be organized into one or two sessions. Each paper will have a short presentation (15–20 minutes) followed by audience Q&A. The topics will span the areas listed above, ensuring a mix of novel hardware, algorithms, and applications.
+Hands-on Tutorial Session: To foster learning and engagement, the organizers’ team will lead a tutorial on thermal sensing techniques and tools. This interactive session (approximately 30 minutes) will introduce participants to working with low-resolution thermal sensors (for example, demonstrating data collection with a thermal array and basic data processing). Attendees will gain practical knowledge, which is especially useful for those new to this domain.
+Panel Discussion and Open Q&A: We will conclude with a moderated panel discussion featuring the keynote speaker, a couple of paper authors, and one organizer. The panel will address open challenges and future directions for thermal sensing and computing. Importantly, we will invite questions and ideas from the audience, facilitating a lively open forum. This discussion segment is intended to spark collaborations and identify key research questions, ensuring attendee involvement beyond passive listening.
+Throughout the workshop, we will encourage an interactive atmosphere. In addition to formal Q&A after each talk, we plan to use mechanisms like a shared online Q&A board or live polls to gather questions and keep discussions active. The half-day format (approximately 4 hours including a coffee break) is compact yet sufficient to cover the content and enable networking among participants.
+Expected Submissions and Participants
+Given the rising interest in thermal sensing across multiple communities, we anticipate a healthy number of submissions and attendees for HotSense. We expect to receive on the order of 10–15 paper submissions in response to our call for papers. From these, around 5–10 high-quality papers will be selected for presentation (matching our session capacity).
+In terms of participation, we estimate 30–50 attendees will take part in the workshop. This estimate is based on the attendance of similar niche workshops in recent years and the broad applicability of the topic. Participants will likely include researchers and practitioners from academia, industry R&D labs, and possibly government labs, who are working on or interested in sensing technologies. We also foresee interest from some MobiCom main conference attendees who are curious about exploring thermal sensing as a new research direction. The expected audience size will create an intimate setting conducive to interaction, while still being large enough to ensure diverse perspectives.
+As this is the first edition of HotSense, there are no previous workshop statistics to report. However, the organizers will leverage their networks and MobiCom’s platform to ensure we reach the target audience and meet (or exceed) these participation expectations.
+Program Committee (Tentative)
+We have assembled a tentative list of program committee members who are experts spanning the relevant fields (mobile computing, ubiquitous sensing, computer vision, etc.). The following individuals have been or will be invited to serve on the HotSense Program Committee:
+Junpei ‘Joni’ Zhong, The Hong Kong Polytechnic University (http://www.junpei.eu/)
+Abdallah Naser, Nottingham Trent University, United Kingdom (https://www.ntu.ac.uk/staff-profiles/science-technology/abdallah-naser)
+Tomoaki Ohtsuki, Keio University, Japan (https://www.ohtsuki.ics.keio.ac.jp/)
+Heng Wu, South China University of Technology (https://scholar.google.com/citations?hl=zh-CN&user=rI8YhI0AAAAJ)
+Nabil Alshurafa, Northwestern University, United States (https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/alshurafa-nabil.html)
+Yomna Abdelrahman, Universität der Bundeswehr München, Germany (https://www.unibw.de/inf4/yomna-abdelrahman)
+Petteri Nurmi, University of Helsinki, Finland (https://www.helsinki.fi/en/researchgroups/pervasive-data-science)
+Alberto Cerpa, University of California, Merced, United States (https://engineering.ucmerced.edu/content/alberto-cerpa)
+Vishwanath Saragadam, University of California, Riverside, United States (https://www.ece.ucr.edu/people/vishwanath-saragadam)
+In So Kweon, KAIST, South Korea (https://rcv.kaist.ac.kr/)
+Ukcheol Shin, Carnegie Mellon University, United States (https://ukcheolshin.github.io/)
+Kyunghyun Lee, Gachon University, South Korea (https://kyunghyunlee.github.io/)
+Yingqian Wang, National University of Defense Technology (https://kyunghyunlee.github.io/)
+Srinivasa G. Narasimhan, Carnegie Mellon University, United States (https://www.cs.cmu.edu/~srinivas/)
+Elisabetta Moisello, University of Pavia (http://ims2.unipv.it/lizzy.html)
+Chris Xiaoxuan Lu, University College London (UCL), United Kingdom (https://xiaoxuan.me/)
+Shijia Pan, University of California, Merced, United States (https://shijiapan.github.io/)
+Xia Zhou, Columbia University, United States (https://www.cs.columbia.edu/~xia/)
+Tam Vu, Dartmouth College, United States (https://faculty-directory.dartmouth.edu/tam-vu)
+Tengxiang Zhang, Chinese Academy of Sciences, China (https://saintnever.github.io/)
+Cheng Zhang, Cornell University, US (https://czhang.org/)
+Yanfei Zhong, Wuhan University, China (https://scholar.google.com/citations?hl=zh-CN&user=Fm7XZ5AAAAAJ)
+Chenshu Wu, The University of Hong Kong, HK SAR, China (https://cswu.me/)
+Muhamad Risqi Utama Saputra, Monash University, Indonesia (https://risqiutama.github.io/)
+Pedro P. B. de Gusma, University of Surrey (https://portobgusmao.com/)
+Andrew Markham, University of Oxford (http://www.amarkham.com/)
+
+This strong PC will ensure rigorous peer review of submissions and help attract quality research contributions. We have balanced the committee to include established researchers as well as emerging experts with direct experience in thermal or related sensing modalities.
+Publicity Plan
+To solicit submissions and ensure broad participation, we will undertake an active publicity campaign for HotSense:
+We will circulate the Call for Papers widely via relevant email lists, including the SIGMOBILE/MobiCom mailing list, the UbiComp and PerCom community lists, and other specialized forums in HCI, computer vision, and robotics. This will reach researchers in mobile computing as well as those in adjacent fields who might be interested in thermal sensing applications.
+The organizers will promote the workshop on social media platforms (Twitter, LinkedIn) and university channels. For example, we will post announcements through our lab social media accounts and encourage colleagues to share the CfP.
+We will personally reach out to researchers known for work in sensing and vision (such as authors of recent papers on thermal or infrared sensing) to invite them to submit and attend.
+The workshop will be listed on the official MobiCom 2025 website and any publicity materials for the conference, which will further increase visibility.
+Our goal with these efforts is not only to attract paper submissions but also to draw a diverse group of attendees (including those who may not submit papers but have a keen interest in the topic). We will open channels (website, email) for interested participants to get information and updates easily.
+Sponsorship
+We are pleased to acknowledge Meridian Innovation (a pioneering developer of advanced CMOS Thermal Imaging solutions) as a confirmed sponsor of the HotSense workshop. Meridian has generously committed HKD 50,000 (approximately USD 6,400) to support the workshop's activities, including keynote speaker arrangements, best paper awards, and participant engagement initiatives. Their support underscores the industry's commitment to advancing research and collaboration in thermal sensing technologies.
+Draft Call for Papers
+HotSense: ACM International Workshop on Thermal Sensing and Computing
+November 8, 2025 | Hong Kong, China | Co-located with ACM MobiCom 2025
+The HotSense workshop aims to bring together researchers interested in thermal/infrared sensing – particularly low-cost, low-resolution thermal arrays – and their applications in mobile systems, HCI, robotics, and beyond. We invite original research papers in (but not limited to) the following areas:
+Thermal-based gesture detection and human activity recognition
+Pose estimation and multi-person tracking with low-resolution thermal imaging
+Indoor localization and movement tracking using thermal/infrared sensors
+Thermal-assisted depth sensing and spatial structure inference (e.g., HADAR)
+Robotic perception and autonomous navigation enhanced by thermal vision
+Material sensing and object classification using thermal signatures
+Precision temperature measurement and scene-level thermal analysis
+Privacy-preserving sensing and surveillance using thermal data
+Low-power and energy-efficient thermal sensing platforms and algorithms
+Novel hardware designs and system software for thermal sensing
+Multimodal data fusion and cross-sensor learning for thermal applications
+Machine learning and AI pipelines tailored for thermal data
+Applications of thermal sensing in mobile health, smart homes, AR/VR, robotics, emergency response and smart cities
+Important Dates:
+Paper Submission Deadline: July 1, 2025
+Notification of Acceptance: August 1, 2025
+Camera-Ready Deadline: August 15, 2025
+Workshop Date: November 8, 2025
+Submitted papers will undergo peer review, and accepted papers will be presented at the workshop and included in the ACM Digital Library (adjunct proceedings of MobiCom 2025). Detailed submission instructions and updates can be found on the workshop website.
+Workshop Website (tentative): https://hotsense.github.io
+
