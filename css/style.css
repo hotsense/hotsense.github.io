@@ -574,3 +574,24 @@ body {
         padding: 4px 12px;
     }
 } 
+
+  .chair-list {
+    max-width: 350px;    
+    margin: 0 auto;      
+    padding-left: 0;     
+    list-style: none;    
+  }
+  .chair-list li {
+    position: relative;
+    padding-left: 1.2em; 
+    text-align: left;    
+  }
+ 
+  .chair-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0.1em;           
+    font-size: 1em;
+    line-height: 1;
+  }
