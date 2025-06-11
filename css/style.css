@@ -603,3 +603,21 @@ body {
     font-size: 1em;
     line-height: 1;
   }
+
+/* 鼠标悬停时，名字变色 */
+a.speaker-name:hover {
+    color: red; /* Bootstrap primary 蓝色 */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 鼠标悬停时，图片微放大并加阴影 */
+a.speaker-photo img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.speaker-photo:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

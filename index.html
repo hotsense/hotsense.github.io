@@ -7,6 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 图片悬停放大和阴影 */
+        .speaker-photo {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        a:hover .speaker-photo {
+          transform: scale(1.05);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+        }
+        
+        /* 姓名悬停变色加下划线 */
+        a.speaker-name {
+          text-decoration: none;
+          color: inherit;
+          transition: color 0.3s ease;
+        }
+        a.speaker-name:hover {
+          color: #0d6efd!important;
+          text-decoration: underline;
+        }
+        </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -203,38 +225,130 @@
                                 <h4>Welcome and Workshop Introduction</h4>
                             </div>
                         </div>
-                        <!-- <div class="program-item">
-                            <div class="time">TBA</div>
-                            <div class="content">
-                                <h4>Keynote I</h4>
-                                <p>Academia</p>
-                            </div>
-                        </div> -->
+                        
                         <div class="program-item">
                             <div class="time">TBA</div>
                             <div class="content">
                                 <h4>
-                                    Keynote I: 
-                                    <a href="https://en.westlake.edu.cn/faculty/fanglin-bao.html" target="_blank" style="text-decoration: none; color: inherit;">
-                                        Prof. Fanglin Bao
-                                    </a>
+                                    Keynote I: Heat-assisted Detection and Ranging
+                                    
                                 </h4>
-                                <p>Assistant Professor, Westlake University</p>
-                                <p><em>Title: TBD</em></p>
-                                </p>
+                                <!-- <p>Assistant Professor, Westlake University, Hang Zhou, China</p>
+                                <div class="col-md-3 text-center">
+                                    <img src="assets/Fanglin.jpg" alt="Prof. Fanglin Bao" class="img-fluid rounded" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                </div>
+                                <p><strong>Title:</strong> <em>Heat-assisted Detection and Ranging</em></p> -->
+
+                                 <!-- 图片 + Affiliation + Title 并排 -->
+                                <div class="row mb-3" style="display: flex; align-items: flex-start;">
+                                    <!-- 左边图片 -->
+                                    <div class="col-md-3 text-center">
+                                        <a href="https://en.westlake.edu.cn/faculty/fanglin-bao.html" target="_blank" style="text-decoration: none;">
+                                            <img src="assets/Fanglin.jpg" alt="Prof. Fanglin Bao" class="speaker-photo" style="max-width: 160px; height: auto; margin-bottom: 0.5rem;">
+                                        </a>
+                                        <div style="font-weight: 600;">
+                                            <a href="https://en.westlake.edu.cn/faculty/fanglin-bao.html" target="_blank" class="speaker-name" style="text-decoration: none; color: inherit;">
+                                                Prof. Fanglin Bao
+                                            </a>
+                                        </div>
+                                        <div style="font-size: 0.9rem;">Westlake University</div>
+                                        <!-- <div style="font-size: 0.9rem;">Hangzhou, China</div> -->
+                                    </div>
+                                    <!-- 右边信息 -->
+                                    <!-- <div class="col-md-9" style="padding-right: 1.9rem;">
+                                    
+                                        <p style="text-align: justify;">
+                                            <strong>Abs:</strong> The emerging Industry 4.0 of smart technologies calls for a future with scalable human-robot social interactions.
+                                            It is expected that one in ten vehicles will be automated by 2030, and millions of robot helpers will be serving people.
+                                            Each of these intelligent agents will ‘observe and see’ its surrounding scene through advanced sensors, to form a computer vision
+                                            and make decisions without human intervention. Traditional cameras cannot function in the dark. State-of-the-art sensors
+                                            (such as LiDAR, radar, and sonar) to enhance the camera vision face difficulties when the number of intelligent agents scales up.
+                                            Thermal imaging could be a new frontier in machine perception but suffers from the ‘ghosting effect’.
+                                            Based on our recent research, this talk will elaborate on the mechanism of the ghosting effect and how HADAR, as featured in <em>Nature</em>(2023), can overcome it, enabling high-resolution night vision for future machine perception.
+                                        </p>
+                                        
+                                    </div> -->
+                                    <!-- Abstract with toggle -->
+                                    <div class="col-md-9" style="padding-right: 1.9rem;">
+                                        <div id="abstract-collapse" style="max-height: 180px; overflow: hidden; transition: max-height 0.5s ease;">
+                                            <p style="text-align: justify; margin-bottom: 1rem;">
+                                                <strong>Abs:</strong> The emerging Industry 4.0 of smart technologies calls for a future with scalable human-robot social interactions.
+                                                It is expected that one in ten vehicles will be automated by 2030, and millions of robot helpers will be serving people.
+                                                Each of these intelligent agents will ‘observe and see’ its surrounding scene through advanced sensors, to form a computer vision
+                                                and make decisions without human intervention. Traditional cameras cannot function in the dark. State-of-the-art sensors
+                                                (such as LiDAR, radar, and sonar) to enhance the camera vision face difficulties when the number of intelligent agents scales up.
+                                                Thermal imaging could be a new frontier in machine perception but suffers from the ‘ghosting effect’.
+                                                Based on our recent research, this talk will elaborate on the mechanism of the ghosting effect and how HADAR, as featured in <em>Nature</em> (2023), can overcome it, enabling high-resolution night vision for future machine perception.
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-secondary" id="toggle-abs-btn" onclick="toggleAbstract()">▼ Show More</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" style="padding-right: 1.9rem;">
+                                    <p style="text-align: justify;">
+                                        <strong>Bio:</strong> Dr. Fanglin Bao is an assistant professor in the School of Science, Westlake University, focusing on information physics and optics. 
+                                        Dr. Bao received his B.S. in Physics (2011) and Ph.D. in Optics (2016) from Zhejiang University.
+                                        He studied quantum vacuum fluctuations, worked out the renormalization of the Casimir force in inhomogeneous systems,
+                                        and discovered the inhomogeneity-induced Casimir transport phenomenon — a nanoscale ‘maglev train’ based on quantum levitation.
+                                        Before joining Westlake University in 2024, he was a postdoctoral scholar and later a research scientist at Purdue University,
+                                        where he worked on quantum optical sensing. He developed heat-assisted detection and ranging (HADAR), quantum-accelerated imaging,
+                                        and adaptive photon-thresholding detection. For the series of work on HADAR, Dr. Bao was recognized with awards, including the
+                                        Intelligent Computing Innovator in 2023 by MIT Technology Review.
+                                    </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="program-item">
                             <div class="time">TBA</div>
                             <div class="content">
                                 <h4>
-                                    Keynote II: 
-                                    <a href="https://www.linkedin.com/in/stanislav-markov-745a18/?originalSubdomain=hk" target="_blank" style="text-decoration: none; color: inherit;">
+                                    Keynote II: Title TBD
+                                    <!-- <a href="https://www.linkedin.com/in/stanislav-markov-745a18/?originalSubdomain=hk" target="_blank" style="text-decoration: none; color: inherit;">
                                         Stanislav Markov
-                                    </a>
+                                    </a> -->
                                 </h4>
-                                <p>Meridian Innovation</p>
-                                <p><em>Title: TBD</em></p>
+                                <!-- <p>Meridian Innovation</p>
+                                <p><em>Title: TBD</em></p> -->
+
+                                <div class="row mb-3" style="display: flex; align-items: flex-start;">
+                                    <!-- 左边图片 -->
+                                    <div class="col-md-3 text-center">
+                                        <a href="https://www.linkedin.com/in/stanislav-markov-745a18/?originalSubdomain=hk" target="_blank" style="text-decoration: none;">
+                                            <img src="assets/Stanislav.jpg" alt="Stanislav Markov" class="speaker-photo" style="max-width: 160px; height: auto; margin-bottom: 0.5rem;">
+                                        </a>
+                                        <div style="font-weight: 600;">
+                                            <a href="https://www.linkedin.com/in/stanislav-markov-745a18/?originalSubdomain=hk" target="_blank" class="speaker-name" style="text-decoration: none; color: inherit;">
+                                                Dr. Stanislav Markov
+                                            </a>
+                                        </div>
+                                        <div style="font-size: 0.9rem;">Meridian Innovation</div>
+                                        <!-- <div style="font-size: 0.9rem;">HK SAR, China</div> -->
+                                    </div>
+                                    <!-- 右边信息 -->
+                                    <div class="col-md-9"style="padding-right: 1.9rem;">
+                                        
+                                        <p style="text-align: justify;">
+                                            <strong>Bio:</strong> Dr. Stanislav Markov is a Scientist and Director at Meridian Innovation, where he leads multidisciplinary efforts in advancing thermal imaging technologies—ranging from silicon MEMS hardware to software-driven thermal data analytics for both consumer and commercial applications.
+
+
+                                            His expertise extends across nanoelectronic semiconductor devices and materials, leveraging advanced modeling techniques such as molecular dynamics, atomistic DFTB + NEGF quantum transport, and statistical reliability analysis in CMOS technologies.
+
+                                            In addition to his academic contributions, he has deep experience in scientific software development, TCAD/EDA tools, RTL design and verification for digital ASICs, SoCs, and FPGAs, as well as low-level hardware programming and process control system design.
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            
+                            <p style="text-align: justify;">
+                                
+                            </p>
+                            
                             </div>
                         </div>
                         <div class="program-item">
@@ -363,5 +477,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function toggleAbstract() {
+            const absBlock = document.getElementById('abstract-collapse');
+            const btn = document.getElementById('toggle-abs-btn');
+            const expanded = absBlock.style.maxHeight === 'none';
+        
+            if (expanded) {
+                absBlock.style.maxHeight = '180px';
+                btn.innerHTML = '▼ Show More';
+            } else {
+                absBlock.style.maxHeight = 'none';
+                btn.innerHTML = '▲ Show Less';
+            }
+        }
+    </script>
+        
 </body>
 </html> 
