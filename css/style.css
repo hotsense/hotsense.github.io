@@ -69,7 +69,22 @@ body {
     min-height: 500px;
     display: flex;
     flex-direction: column;
-}
+    /* max-height: 150vh; 
+    justify-content: center; 
+    z-index: 1; */
+} 
+/* 响应式字体缩放 */
+/* @media (max-width: 768px) {
+    .hero-section h1.display-4 {
+      font-size: 2rem;
+    }
+    .hero-section h2.h3 {
+      font-size: 1.25rem;
+    }
+    .hero-section .lead {
+      font-size: 1rem;
+    }
+  } */
 
 .hero-content {
     position: relative;
@@ -298,7 +313,7 @@ body {
 }
 
 .sponsor-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #666;
     max-width: 600px;
     margin: 1rem auto 0;
@@ -367,7 +382,7 @@ body {
     }
 
     .timeline {
-        margin-left: 24px;
+        margin-left: 28px;
     }
     .timeline-item {
         flex-direction: column;
@@ -376,17 +391,21 @@ body {
     }
     .timeline-marker {
         margin-bottom: 0.5rem;
-        margin-right: 12px;
-        left: -6px;
+        margin-right: 0;
+        left: -10px;
+        align-self: flex-start;
+        margin-top: 0.3rem;
     }
     .timeline-item .date {
         width: 100%;
         margin-right: 0;
         margin-bottom: 0.5rem;
         text-align: left;
+        padding-left: 20px;
+        margin-top: -2.2rem;
     }
     .timeline-item .content {
-        padding-left: 0;
+        padding-left: 20px;
     }
 
     .program-item {
@@ -409,7 +428,12 @@ body {
     .sponsor-description {
         font-size: 0.9rem;
     }
+    .image-comparison {
+        height: 100vh;       
+        min-height: 400px;    
+      }
 
+    /* Remove conflicting rules for image comparison
     .comparison-wrapper {
         height: 250px;
     }
@@ -417,6 +441,7 @@ body {
     .image-comparison {
         height: 50vh;
     }
+    */
 }
 
 /* Animations */
@@ -447,12 +472,18 @@ body {
     margin: 0;
     overflow: hidden;
     z-index: 1;
+    /* min-height: 1000000px;   */
 }
+
 
 .comparison-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
+    /* height: auto; 💡关键2：只撑宽度，高度自适应 */
+    /* transform: translate(-50%, -50%); 💡关键3：居中并允许裁切上下部分 */
+    /* aspect-ratio: 16 / 9; */
+    /* max-height: 800px; */
     overflow: hidden;
     background: rgba(0, 0, 0, 0.2);
 }
@@ -552,9 +583,11 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Remove conflicting rule for comparison-wrapper
     .comparison-wrapper {
         height: 250px;
     }
+    */
     
     .comparison-handle {
         height: 60px;
