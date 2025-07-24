@@ -629,9 +629,34 @@ body {
   }
  
   .chair-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;           
+    font-size: 1em;
+    line-height: 1;
+  }
+  .chair-list_TPC {
+    max-width: 470px;    
+    margin: 0 auto;      
+    padding-left: 0;     
+    list-style: none;    
+  }
+  .chair-list_TPC li {
+    position: relative;
+    padding-left: 1.2em; 
+    text-align: left;    
+  }
+  .chair-list_TPC a {
+    text-decoration: none;
+    padding-left: 1.2em;
+  }
+ 
+  .chair-list_TPC li::before {
     content: "•";
     position: absolute;
     left: 0;
+    padding-left: 1.2em;
     top: 0.1em;           
     font-size: 1em;
     line-height: 1;
