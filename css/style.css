@@ -199,6 +199,11 @@ body {
 .timeline-item:last-child {
     margin-bottom: 0;
 }
+.timeline-item .extended {
+    font-size: 0.85em;
+    color: #d9534f; /* 红色或者你想要的颜色 */
+    font-weight: normal;
+}
 
 /* Program Schedule */
 .program-schedule {
