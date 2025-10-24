@@ -212,6 +212,7 @@ body {
 
 .program-item {
     display: flex;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
     padding: 1rem;
     background: white;
@@ -219,14 +220,42 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.program-item.center-time {
+    align-items: center;
+}
+
 .program-item .time {
     width: 100px;
     font-weight: bold;
     color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.3;
+    flex-shrink: 0;
+}
+
+.program-item .time-separator {
+    font-size: 1.5rem;
+    opacity: 0.6;
+    margin: 2px 0;
+    color: var(--secondary-color);
+    font-weight: 600;
 }
 
 .program-item .content {
     flex: 1;
+}
+
+/* Paper List Styles */
+.paper-list .paper-item p strong {
+    font-weight: 600;
+    color: #495057;
+}
+
+.paper-list .paper-item .text-muted {
+    font-style: italic;
 }
 
 /* Committee Members */
@@ -420,6 +449,15 @@ body {
     .program-item .time {
         width: 100%;
         margin-bottom: 0.5rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .program-item .time-separator {
+        margin: 0 5px;
+        transform: rotate(90deg);
     }
 
     .sponsor-logo {
